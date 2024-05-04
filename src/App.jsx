@@ -1,4 +1,6 @@
 import { useState, useLayoutEffect } from "react";
+import Pricingtable from "./components/Pricingtable";
+import Invoice from "./components/Invoice";
 
 // eslint-disable-next-line react/prop-types
 const App = ({ data }) => {
@@ -8,11 +10,9 @@ const App = ({ data }) => {
     console.log("Data is", data);
   }, [data, crmData]);
   return (
-    <section className="mx-8">
-      <h1 className="text-2xl">Zoho Widget React Extension(WITH TAILWIND)</h1>
-      <p>
-        This is a boilerplate for creating a Zoho Widget React Extension.
-      </p>
+    <section className="flex h-screen  justify-center items-center">
+      <Pricingtable />
+      {/* <Invoice /> */}
     </section>
   );
 };
